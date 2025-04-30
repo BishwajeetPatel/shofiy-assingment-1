@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Bliss Oversized T-shirt | Shopify Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container container">
+            <div class="logo">ShopStyle</div>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Collections</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <span class="header-icon"><i class="fas fa-search"></i></span>
+                <span class="header-icon"><i class="fas fa-user"></i></span>
+                <span class="header-icon"><i class="fas fa-heart"></i></span>
+                <span class="header-icon"><i class="fas fa-shopping-cart"></i></span>
+                <span class="mobile-menu"><i class="fas fa-bars"></i></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Product Section -->
+        <section class="product-section">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <img src="banana threads 1.jpeg" alt="Banana Bliss Oversized T-shirt" class="main-image" id="main-product-image">
+                <div class="thumbnail-container">
+                    <img src="banana threads yellow 1.jpeg" alt="Banana Bliss Thumbnail 1" class="thumbnail active" onclick="changeImage(this, 'banana threads yellow 1.jpeg')">
+                    <img src="banana threads blue.jpeg" alt="Banana Bliss Thumbnail 2" class="thumbnail" onclick="changeImage(this, 'banana threads blue.jpeg')">
+                    <img src="banana threads pink.jpeg" alt="Banana Bliss Thumbnail 3" class="thumbnail" onclick="changeImage(this, 'banana threads pink.jpeg')">
+                    <img src="banana threads green 1.jpeg" alt="Banana Bliss Thumbnail 4" class="thumbnail" onclick="changeImage(this, 'banana threads green 1.jpeg')">
+                </div>
+            </div>
+            
+            <!-- Product Information -->
+            <div class="product-info">
+                <div class="breadcrumb">
+                    <a href="#">Home</a> / <a href="#">Clothing</a> / <a href="#">T-shirts</a> / <span>Banana Bliss Oversized T-shirt</span>
+                </div>
+                
+                <h1 class="product-title">Banana Bliss Oversized T-shirt</h1>
+                <span class="size-chart-link" id="size-chart-trigger">Size Chart</span>
+                
+                <div class="price-container">
+                    <span class="current-price">Rs. 1541</span>
+                    <span class="old-price">Rs. 2300</span>
+                    <span class="discount-badge">33% OFF</span>
+                </div>
+                
+                <p class="product-description">
+                    Embrace casual comfort with our Banana Bliss Oversized T-shirt. Made from premium cotton, this relaxed-fit tee features a playful banana print that adds a pop of color to your everyday style. Perfect for lounging at home or casual outings.
+                </p>
+                
+                <div class="color-selector">
+                    <h3 class="selector-title">Color</h3>
+                    <div class="color-options">
+                        <div class="color-option color-yellow selected" onclick="selectColor(this)"></div>
+                        <div class="color-option color-blue" onclick="selectColor(this)"></div>
+                        <div class="color-option color-pink" onclick="selectColor(this)"></div>
+                        <div class="color-option color-green" onclick="selectColor(this)"></div>
+                    </div>
+                </div>
+                
+                <div class="size-selector">
+                    <h3 class="selector-title">Size</h3>
+                    <div class="size-options">
+                        <div class="size-option" onclick="selectSize(this)">XS</div>
+                        <div class="size-option" onclick="selectSize(this)">S</div>
+                        <div class="size-option selected" onclick="selectSize(this)">M</div>
+                        <div class="size-option" onclick="selectSize(this)">L</div>
+                        <div class="size-option" onclick="selectSize(this)">XL</div>
+                        <div class="size-option out-of-stock">XXL</div>
+                    </div>
+                </div>
+                
+                <div class="quantity-selector">
+                    <h3 class="selector-title">Quantity:</h3>
+                    <div class="quantity-btn decrease" onclick="decreaseQuantity()">-</div>
+                    <input type="number" class="quantity-input" value="1" min="1" max="10" id="quantity-input">
+                    <div class="quantity-btn increase" onclick="increaseQuantity()">+</div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                    <button class="wishlist-btn">
+                        <i class="fas fa-heart"></i>
+                        Wishlist
+                    </button>
+                </div>
+                
+                <div class="delivery-info">
+                    <div class="delivery-item">
+                        <i class="fas fa-truck delivery-icon"></i>
+                        <span>Free shipping for orders over Rs 500</span>
+                    </div>
+                    <div class="delivery-item">
+                        <i class="fas fa-undo-alt delivery-icon"></i>
+                        <span>30-day easy returns</span>
+                    </div>
+                    <div class="delivery-item">
+                        <i class="fas fa-shield-alt delivery-icon"></i>
+                        <span>Secure checkout</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Related Products Section -->
+        <section class="related-products">
+            <h2 class="section-title">You May Also Like</h2>
+            <div class="product-slider">
+                <div class="slider-btn prev" onclick="scrollSlider(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="slider-container" id="related-products-slider">
+                    <div class="product-card">
+                        <img src="images/sample 1.jpeg" alt="Related Product 1" class="product-card-img">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Tropical Paradise Tee</h3>
+                            <p class="product-card-price">Rs 1300</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/sample 2.jpeg" alt="Related Product 2" class="product-card-img">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Summer Vibes Shirt</h3>
+                            <p class="product-card-price">Rs 1350</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/sample 3.jpeg" alt="Related Product 3" class="product-card-img">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Coastal Wave Tee</h3>
+                            <p class="product-card-price">Rs 1675</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/sample 4.jpeg" alt="Related Product 4" class="product-card-img">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Sunset Beach Shirt</h3>
+                            <p class="product-card-price"> Rs 1245</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/images/sample 5.jpeg" alt="Related Product 5" class="product-card-img">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Island Breeze Top</h3>
+                            <p class="product-card-price">Rs 1457</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/sample 6.jpeg" alt="Related Product 6" class="product-card-img">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Palm Tree Tee</h3>
+                            <p class="product-card-price">Rs 1399</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/sample 7.jpeg" alt="Related Product 7" class="product-card-img">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Ocean Waves Shirt</h3>
+                            <p class="product-card-price">Rs 1199</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/sample 8.jpeg" alt="Related Product 8" class="product-card-img">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Surf's Up Tee</h3>
+                            <p class="product-card-price">Rs 1099</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-btn next" onclick="scrollSlider(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Size Chart Modal -->
+    <div class="modal-overlay" id="size-chart-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h2 class="modal-title">Size Chart - Banana Bliss Oversized T-shirt</h2>
+            <img src="images/size- chart.png" alt="Size Chart" class="size-chart-img">
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">ShopStyle</h3>
+                    <p>Quality clothing for every occasion. Discover our range of comfortable and stylish apparel.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Collections</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p>Subscribe to get special offers and updates on new arrivals.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopStyle. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
