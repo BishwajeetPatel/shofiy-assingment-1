@@ -59,10 +59,6 @@ Interact with the page to explore features.
 
 📸 Screenshots (Optional: Add before/after screenshots to highlight the UI improvement)
 
-📌 Notes Replace the sample images with your actual product visuals.
 
-Hook the add-to-cart functionality with backend logic as needed.
-
-This is a static frontend project and doesn't include cart or authentication backends.
 
 🧑‍💻 Author Designed and developed by [Bishwajeet Patel].
